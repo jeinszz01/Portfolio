@@ -1,0 +1,106 @@
+
+.profile-section {
+    padding: 10rem 0;
+    background-image: url('../assets/img/banner-bg.png');
+    background-position: top center;
+    z-index: 1;
+    position: relative;
+}
+.banner {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 2rem;
+}
+.text-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.text-banner h1 {
+    align-self: start;
+    font-weight: 700;
+    padding: 8px 10px;
+    letter-spacing: 0.8px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+.text-banner h2 {
+    align-self: start;
+}
+.text-banner h2 .wrap{
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    border-right: 4px solid #666;
+    animation: blinck .5s infinite step-end alternate;
+}
+.text-banner p {
+    align-self: start;
+    color: #B8B8B8;
+    font-family: centra, sans-serif;
+    font-size: 18px;
+    display: block;
+    letter-spacing: normal;
+}
+@keyframes typing {
+    from {width: 0}
+}
+@keyframes blinck {
+    50% {border-color: transparent}
+}
+.text-banner p span {
+    display: block;
+}
+
+.text-banner img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-img img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    animation: updown 3s linear infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: updown;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (min-width:1200px) {
+    .banner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .text-banner {
+        grid-column: 1/3;
+    }
+}
+

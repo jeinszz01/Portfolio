@@ -1,0 +1,237 @@
+/*
+nav.light {
+    background-color: #d4d3d4;
+    height: 100vh;
+    width: 100vw;
+}
+nav.dark {
+    background-color: #252525;
+    height: 100vh;
+    width: 100vw;
+}*/
+/************ Navbar Css ************/
+nav.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  transition: 0.8s ease-in-out;
+}
+nav.scrolled {
+  padding: 0px 0;
+  background-color: #121212c4;
+  transition: 0.8s ease-in-out;
+}
+
+div.container {
+  padding: 25px 25px 25px 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #121212; */
+  z-index: 2;
+  position: relative;
+}
+
+.container nav a {
+  color: #fff;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  font-size: 18px;
+}
+
+.menu a.navbar-link{
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  opacity: 0.75;
+}
+.menu a.navbar-link.active,
+.menu a.navbar-link:hover {
+  opacity: 1;
+}
+
+div.social-buttons {
+  display: flex;
+  gap: 0 2rem;
+}
+
+div.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+.social-icon a {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+  content: "";
+  width: 2.5em;
+  height: 2.5rem;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a img {
+  width: 50%;
+  /* z-index: 1; */
+	transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+.social-buttons button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+  white-space: nowrap;  /*evita un salto de linea*/
+  cursor: pointer;
+}
+.social-buttons button::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+.social-buttons button:hover::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.social-buttons button:hover {
+  color: #121212;
+}
+
+.menu-icono {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.menu-icono img {
+  width: 25px;
+  height: 25px;
+}
+
+.switch {
+  background-color: orange;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  gap: 0 2.5px;
+}
+.switch ::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  display: block;
+  background-color: aliceblue;
+  position: absolute;
+  top: 0;
+  left: unset;
+  right: 0;
+  transition: .3s ease-in-out;
+  box-shadow: 0px 0px 2px 2px #121212;
+}
+.switch span {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+.switch span img {
+  width: 80%;
+  height: 80%;
+  filter: invert(97%) sepia(3%) saturate(12%) hue-rotate(84deg) brightness(105%) contrast(104%);
+}
+.switch.active-dark {
+  background-color: #4b4b4b;
+}
+.switch.active-dark ::after {
+  right: unset;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: -230px;
+    left: 0;
+    background-color: transparent;
+    transition: .8s ease-in-out;
+    z-index: -1;
+  }
+  .menu.active-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 2rem;
+    padding-top: 86px;
+    z-index: -1;
+    background-color: #121212c4;
+    transition: 0.8s ease-in-out;
+  }
+  div.social-buttons {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .social-icon {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-icono {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+}
