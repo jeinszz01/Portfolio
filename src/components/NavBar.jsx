@@ -55,10 +55,10 @@ const NavBar = () => {
                     <a href="#projects" className={activeLink === 'projects' ? 'navbar-link active' : 'navbar-link'} onClick={() => eventNavbar('projects')}>Projects</a>
                     <div className='social-buttons'>
                         <div className='social-icon'>
-                            <a href='https://www.linkedin.com/in/jein-josef-rojas-licas-213446110/' className='icon'><img src={navIcon1} alt='nav-icon1' /></a>
-                            <a href='https://www.facebook.com/jeinjosef.rojaslicas' className='icon'><img src={navIcon2} alt='nav-icon2' /></a>
-                            <a href='https://www.instagram.com' className='icon'><img src={navIcon3} alt='nav-icon3' /></a>
-                            <a href='https://github.com/jeinszz01' className='icon'><img src={github} alt='nav-icon3' /></a>
+                            <a href='https://www.linkedin.com/in/jein-josef-rojas-licas-213446110/' className='icon' target="_blank"><img src={navIcon1} alt='nav-icon1' /></a>
+                            <a href='https://www.facebook.com/jeinjosef.rojaslicas' className='icon' target="_blank"><img src={navIcon2} alt='nav-icon2' /></a>
+                            <a href='https://www.instagram.com' className='icon' target="_blank"><img src={navIcon3} alt='nav-icon3' /></a>
+                            <a href='https://github.com/jeinszz01' className='icon' target="_blank"><img src={github} alt='nav-icon3' /></a>
                         </div>
                         <a href="#contact"><button type='button' onClick={() => eventNavbar('contactMe')}><span>Contact me</span></button></a>
                     </div>
