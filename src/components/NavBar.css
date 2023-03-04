@@ -19,7 +19,7 @@ nav.navbar {
 }
 nav.scrolled {
   padding: 0px 0;
-  background-color: #121212c4;
+  background-color: #121212de;
   transition: 0.8s ease-in-out;
 }
 
@@ -215,9 +215,9 @@ div.social-icon {
     top: 0;
     left: 0;
     gap: 2rem;
-    padding-top: 86px;
+    padding-top: 120px;
     z-index: -1;
-    background-color: #121212c4;
+    background-color: #121212de;
     transition: 0.8s ease-in-out;
   }
   div.social-buttons {
