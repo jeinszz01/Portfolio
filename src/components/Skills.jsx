@@ -59,27 +59,27 @@ const Skills = () => {
                         <h3>React</h3>
                     </div>
                     <div className="item">
-                        <img src={responsiveLogo} alt="Imagen-item4" />
+                        <img src={responsiveLogo} alt="Imagen-item5" />
                         <h3>Responsive Websites</h3>
                     </div>
                     <div className="item">
-                        <img src={sassLogo} alt="Imagen-item4" />
+                        <img src={sassLogo} alt="Imagen-item6" />
                         <h3>SASS</h3>
                     </div>
                     <div className="item">
-                        <img src={visualSLogo} alt="Imagen-item4" />
+                        <img src={visualSLogo} alt="Imagen-item7" />
                         <h3>VS Code</h3>
                     </div>
                     <div className="item">
-                        <img src={restApiLogo} alt="Imagen-item4" />
+                        <img src={restApiLogo} alt="Imagen-item8" />
                         <h3>RESTful APIs</h3>
                     </div>
                     <div className="item">
-                        <img src={gitLogo} alt="Imagen-item4" />
+                        <img src={gitLogo} alt="Imagen-item9" />
                         <h3>Git</h3>
                     </div>
                     <div className="item">
-                        <img src={gitHubLogo} alt="Imagen-item4" />
+                        <img src={gitHubLogo} alt="Imagen-item10" />
                         <h3>GitHub</h3>
                     </div>
                 </Carousel>
