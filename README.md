@@ -3,11 +3,11 @@
 
 # Demo
 [Puedes ver el proyecto aquí 🚀](https://tourmaline-sable-24956a.netlify.app)
+
 ---
 ### Portafolio hecho en React y usando dos librerías (react-multi-carousel and emailjs).
 ---
-### Portafolio hecho en React y usando dos librerías (react-multi-carousel and emailjs).
----
+
 
 # Getting Started
 Clona este repositorio en tu maquina local usando el comando "git clone".
