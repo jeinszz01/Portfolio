@@ -67,3 +67,20 @@ body {
 ::-webkit-scrollbar-track {
   background: #bbb7c0fa;
 }
+
+@keyframes costado {
+  0% {
+      transform: translateX(100px);
+  }
+  100% {
+      transform:  translateX(0);
+  }
+}
+@keyframes subir {
+  0% {
+      transform: translateY(100px);
+  }
+  100% {
+      transform:  translateY(0);
+  }
+}

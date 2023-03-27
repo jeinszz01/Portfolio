@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 import emailjs from '@emailjs/browser';
 import contactImg from '../assets/img/contact-img.svg'
 import './Contact.css'
 
 const Contact = () => {
+    /* Animation */
+    const [animado, setAnimado ] = useState(false)
+    const boxRef = useRef()
+    
+    const mostrarScroll = () => {
+        let scrollTops = document.documentElement.scrollTop
+        const y = boxRef.current.offsetTop;
+        if(y - 480  < scrollTops) {
+            setAnimado(true)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', mostrarScroll)
+    }, [])
 
+    /* EmailJs */
     const formInitialDetails = {
         firstName: '',
         lastName: '',
@@ -41,8 +56,8 @@ const Contact = () => {
     }
 
     return (
-        <section className='contact' id='contact'>
-            <div className='contact-container'>
+        <section className={`contact`} id='contact'>
+            <div ref={boxRef} className={`contact-container ${animado ? 'animado mostrarArriba' : ''}`}>
                 <div>
                     <img src={contactImg} alt='img-contact' />
                 </div>

@@ -1,6 +1,15 @@
 .projects {
     padding: 3rem 0 6rem 0;
+    opacity: 0;
 }
+.animado {
+    opacity: 1;
+    transition: all 2s;
+}
+.mostrarCostado {
+    animation: costado 1s; /**keyframe App.css**/
+}
+
 .projects-menu {
     width: 90%;
     margin: 0 auto;

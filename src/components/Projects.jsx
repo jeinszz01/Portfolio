@@ -7,10 +7,25 @@ import encriptador from '../assets/img/encriptador.png'
 import github from '../assets/img/github.svg'
 import goProject from '../assets/img/go-project.svg'
 import './Projects.css'
+import { useRef, useState, useEffect } from 'react'
 
 const Projects = () => {
+    const [animado, setAnimado ] = useState(false)
+    const boxRef = useRef()
+    
+    const mostrarScroll = () => {
+        let scrollTops = document.documentElement.scrollTop
+        const y = boxRef.current.offsetTop;
+        if(y - 400  < scrollTops) {
+            setAnimado(true)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', mostrarScroll)
+    }, [])
+    
     return (
-        <section className='projects' id='projects'>
+        <section ref={boxRef} className={`projects ${animado ? 'animado mostrarCostado' : ''}`} id='projects'>
             <div className='projects-menu'>
                 <h2>Projects</h2>
                 <div className='projects-content'>

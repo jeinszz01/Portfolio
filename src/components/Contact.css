@@ -8,7 +8,16 @@
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 1rem;
     place-items: center;
+    opacity: 0;
 }
+.animado {
+    opacity: 1;
+    transition: all 2s;
+}
+.mostrarArriba {
+    animation: subir 1s; /**keyframe App.css**/
+}
+
 .contact-container img {
     max-width: 100%;
     width: 550px;
