@@ -4,6 +4,7 @@ import clima from '../assets/img/clima.png'
 import bebidas from '../assets/img/bebidas.png'
 import veterinaria from '../assets/img/veterinaria_pacientes.png'
 import encriptador from '../assets/img/encriptador.png'
+import ecommerce from '../assets/img/demo1.png'
 import github from '../assets/img/github.svg'
 import goProject from '../assets/img/go-project.svg'
 import './Projects.css'
@@ -92,6 +93,17 @@ const Projects = () => {
                             <div className='pro-text-links'>
                                 <a href='https://jeinszz01.github.io/Encriptador-de-texto---Html-Css-and-Js/' target="_blank"><img src={goProject} alt='go-projects' />Visit Wesite</a>
                                 <a href='https://github.com/jeinszz01/Encriptador-de-texto---Html-Css-and-Js' target="_blank"><img src={github} alt='github' />Repository</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div className='projects-cards'>
+                        <img src={ecommerce} alt='img-ecommerce' />
+                        <div className='pro-text'>
+                            <h4>Ecommerce Games</h4>
+                            <p>Proyecto e-commerce de videojuegos hecho en Java Script. | #challengeonealurageeklatam4</p>
+                            <div className='pro-text-links'>
+                                <a href='https://taupe-dodol-54fe4c.netlify.app' target="_blank"><img src={goProject} alt='go-projects' />Visit Wesite</a>
+                                <a href='https://github.com/jeinszz01/e-commerce-games' target="_blank"><img src={github} alt='github' />Repository</a> 
                             </div>
                         </div>
                     </div>
