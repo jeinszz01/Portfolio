@@ -6,12 +6,14 @@ import github from '../assets/img/github.svg'
 import menu from '../assets/img/menu.svg'
 import sun from '../assets/img/sun.svg'
 import moon from '../assets/img/moon.svg'
-import './NavBar.css'
+import { Navbar, DivContainer, DivSocialButtons, BotonMenuIcon, DivMenu, Links, ButtonSwitcher } from './NavBar-style-component'
+import { EnlaceLogo, DivSocialIcons } from './themes/defaults'
 
-const NavBar = () => {
-
-    const [ activeLink, setActiveLink ] = useState('home')
-    const [ activeMode, setActiveMode ] = useState(false)
+const NavBar = ({handleTheme, activeMode}) => {
+    
+    const [ activeLinkH, setActiveLinkH ] = useState(false)
+    const [ activeLinkS, setActiveLinkS ] = useState(false)
+    const [ activeLinkP, setActiveLinkP ] = useState(false)
     const [ activeScroll, setActiveScroll ] = useState(false)
     const [ scrolled, setScrolled] = useState(false);
 
@@ -27,50 +29,59 @@ const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
-    const eventNavbar = async(dat) => {
+    const eventNavbar = (dat) => {
         if(dat === 'home') {
             window.scrollTo(0,0)
-            setActiveLink('home')
+            setActiveLinkH(true)
+            setActiveLinkS(false)
+            setActiveLinkP(false)
+            setActiveScroll(false)
         }
         if(dat === 'skills') {
-            setActiveLink('skills')
+            setActiveLinkS(true)
+            setActiveLinkH(false)
+            setActiveLinkP(false)
+            setActiveScroll(false)
         }
         if(dat === 'projects') {
-            setActiveLink('projects')
+            setActiveLinkP(true)
+            setActiveLinkH(false)
+            setActiveLinkS(false)
+            setActiveScroll(false)
         }
         if(dat === 'contactMe') {
-            setActiveLink('contact')
+            setActiveScroll(false)
         }
     }
 
     return (
-        <nav className={`navbar  ${scrolled===false || activeScroll ? '' : 'scrolled'}`} id='home' >
-            <div className={`container`}>
+        <Navbar scrolled={scrolled} activeScroll={activeScroll} id='home' >
+            <DivContainer scrolled={scrolled} activeScroll={activeScroll}>
                 <nav>
-                    <a href='/'>JeinS</a>
+                    <EnlaceLogo href='/'>Jein<span>S</span></EnlaceLogo>
                 </nav>
-                <div className={`menu ${activeScroll  ? 'menu active-scroll' : ''}`}>
-                    <a href='#home' className={activeLink === 'home' ? 'navbar-link active' : 'navbar-link'} onClick={() => eventNavbar('home')} >Home</a>
-                    <a href="#skills" className={activeLink === 'skills' ? 'navbar-link active' : 'navbar-link'} onClick={() => eventNavbar('skills')}>Skills</a>
-                    <a href="#projects" className={activeLink === 'projects' ? 'navbar-link active' : 'navbar-link'} onClick={() => eventNavbar('projects')}>Projects</a>
-                    <div className='social-buttons'>
-                        <div className='social-icon'>
-                            <a href='https://www.linkedin.com/in/jein-josef-rojas-licas-213446110/' className='icon' target="_blank"><img src={navIcon1} alt='nav-icon1' /></a>
-                            <a href='https://www.facebook.com/jeinjosef.rojaslicas' className='icon' target="_blank"><img src={navIcon2} alt='nav-icon2' /></a>
-                            <a href='https://www.instagram.com' className='icon' target="_blank"><img src={navIcon3} alt='nav-icon3' /></a>
-                            <a href='https://github.com/jeinszz01' className='icon' target="_blank"><img src={github} alt='nav-icon3' /></a>
-                        </div>
+                <DivMenu activeScroll={activeScroll}>
+                    <Links href='#home' activeLink={activeLinkH} onClick={() => eventNavbar('home')}>Home</Links>
+                    <Links href="#skills" activeLink={activeLinkS}  onClick={() => eventNavbar('skills')}>Skills</Links>
+                    <Links href="#projects" activeLink={activeLinkP}  onClick={() => eventNavbar('projects')}>Projects</Links>
+                    <DivSocialButtons>
+                        <DivSocialIcons>
+                            <a href='https://www.linkedin.com/in/jein-josef-rojas-licas-213446110/' target="_blank"><img src={navIcon1} alt='nav-icon1'/></a>
+                            <a href='https://www.facebook.com/jeinjosef.rojaslicas' target="_blank"><img src={navIcon2} alt='nav-icon2'/></a>
+                            <a href='https://www.instagram.com' target="_blank"><img src={navIcon3} alt='nav-icon3'/></a>
+                            <a href='https://github.com/jeinszz01' target="_blank"><img src={github} alt='nav-icon3'/></a>
+                        </DivSocialIcons>
                         <a href="#contact"><button type='button' onClick={() => eventNavbar('contactMe')}><span>Contact me</span></button></a>
-                    </div>
-                    <button className={activeMode ? 'switch' : 'active-dark switch'} onClick={() => setActiveMode(!activeMode)}>
+                    </DivSocialButtons>
+                    <ButtonSwitcher activeMode={!activeMode} onClick={handleTheme}>
                         <span><img src={sun} alt='icono-sun'/></span>
                         <span><img src={moon} alt='icono-moon'/></span>
-                    </button>
-                </div>
+                    </ButtonSwitcher>
+                </DivMenu>
                 
-                <button type='button' className='menu-icono' onClick={() => setActiveScroll(!activeScroll)}><img src={menu} alt='icono-menu' /></button>
-            </div>
-        </nav>
+                <BotonMenuIcon type='button' onClick={() => setActiveScroll(!activeScroll)}><img src={menu} alt='icono-menu'/></BotonMenuIcon>
+            </DivContainer>
+        </Navbar>
     )
 }
 
