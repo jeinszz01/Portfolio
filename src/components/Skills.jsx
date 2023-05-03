@@ -1,4 +1,4 @@
-import htmlLogo from '../assets/img/html5.png'
+import htmlLogo from '../assets/img/html.png'
 import cssLogo from '../assets/img/css3.png'
 import javaScriptLogo from '../assets/img/JavaScript-logo.png'
 import reactLogo from '../assets/img/react-logo.png'
