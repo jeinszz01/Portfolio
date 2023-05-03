@@ -41,6 +41,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${({theme}) => theme.texto};
     font-family: Centra, sans-serif, Helvetica, 'Courier New', Courier, monospace;
   }
+  textarea {
+    font-family: Centra, sans-serif, Helvetica, 'Courier New', Courier, monospace;
+  }
 
   /** Configuración Scroll **/
   ::-webkit-scrollbar {

@@ -40,7 +40,6 @@ export const DivFormContent = styled.div`
         border-radius: 20px;
         color: #fff;
         padding: 18px 26px;
-        font-family: Centra;
         font-weight: 500;
         font-size: 18px;
         letter-spacing: 0.8px;
