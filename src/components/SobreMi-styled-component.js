@@ -9,7 +9,7 @@ export const SectionSobreMi = styled.section`
 `
 export const AboutMeContainer = styled.div`
     background-color: ${({theme}) => theme.contenido};
-    border-radius: 3.5rem;
+    border-radius: 2rem;
     margin-top: -120px;
     padding: 2rem 0;
     position: relative;

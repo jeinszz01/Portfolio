@@ -21,7 +21,7 @@ function App() {
     return (
         <ThemeProvider theme={tema ? themeDark : themeLigth} >
             <GlobalStyle />
-            <NavBar handleTheme={handleTheme} activeMode={activeMode} setActiveMode={setActiveMode} />
+            <NavBar handleTheme={handleTheme} activeMode={activeMode} />
             <Banner />
             <SobreMi />
             <Skills />

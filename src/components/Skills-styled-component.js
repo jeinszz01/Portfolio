@@ -3,14 +3,11 @@ import Carousel from "react-multi-carousel";
 
 export const SectionSkillsContainer = styled.section`
     padding: 0 0 50px 0;
-    background-image: url('/src/assets/img/color-sharp.png');
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(16deg, rgba(136,106,118,1) 0%, rgba(255,244,230,0) 50%);
 `
 export const SkillBox = styled.div`
     background: ${({theme}) => theme.contenido};
-    border-radius: 64px;
+    border-radius: 2rem;
     text-align: center;
     padding: 4rem 0;
     width: 90%;

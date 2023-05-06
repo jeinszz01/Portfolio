@@ -73,7 +73,7 @@ const NavBar = ({handleTheme, activeMode}) => {
                         </DivSocialIcons>
                         <a href="#contact"><button type='button' onClick={() => eventNavbar('contactMe')}><span>Contact me</span></button></a>
                     </DivSocialButtons>
-                    <ButtonSwitcher activeMode={!activeMode} onClick={handleTheme}>
+                    <ButtonSwitcher activeMode={!activeMode} onClick={() => handleTheme()}>
                         <span><img src={sun} alt='icono-sun'/></span>
                         <span><img src={moon} alt='icono-moon'/></span>
                     </ButtonSwitcher>
