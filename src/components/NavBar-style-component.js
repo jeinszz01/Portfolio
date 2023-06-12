@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { fondoOscuro } from "./themes/variables";
 
 
 export const Navbar = styled.nav`
@@ -10,6 +9,7 @@ export const Navbar = styled.nav`
     transition: .5s ease-in-out;
     padding: ${({scrolled, activeScroll}) => !scrolled || activeScroll ? '' : '0'};
     background-color: ${({scrolled, activeScroll, theme}) => !scrolled || activeScroll ? '' : theme.contenidoNav};
+    backdrop-filter: ${({scrolled, activeScroll}) => !scrolled || activeScroll ? '' : 'blur(10px)'};
 `
 export const DivContainer = styled.div`
     padding: 20px 0 20px 0;
@@ -20,7 +20,6 @@ export const DivContainer = styled.div`
     margin: 0 auto;
     z-index: 2;
     position: relative;
-    border-bottom: ${({scrolled, activeScroll, theme}) => !scrolled || activeScroll ? '' : theme.fondo === fondoOscuro ? '' : '1px solid rgba(0, 0, 0, 0.3)'};
     transition: .5s ease-in-out;
 `
 

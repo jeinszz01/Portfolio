@@ -3,7 +3,7 @@ export const colorPrimario = '#41D3BE'
 
 export const fondoclaro = '#FFF4E6'
 export const contenidoClaro = 'white'
-export const contenidoClaroNav = 'rgba(255, 255, 255, 0.9)'/* */
+export const contenidoClaroNav = 'rgba(255, 255, 255, 0.5)'/* */
 export const textoClaro = '#000'
 export const textoClarospan = 'rgba(81, 50, 88, 1)'
 export const textoClaroLogo = '#2C224C'
@@ -17,7 +17,7 @@ export const fondoClaroContact = 'linear-gradient(120deg, #FEDF8F 0%, #FF9F6A 10
 
 export const fondoOscuro = 'black'
 export const contenidoOscuro = '#262626'
-export const contenidoOscuroNav = 'rgba(0, 0, 0, 0.9)'
+export const contenidoOscuroNav = 'rgba(0, 0, 0, 0.5)'
 export const textoOscuro = '#FFF'
 export const textoOscurospan = '#FFF'
 export const textoOscuroLogo = '#FF8B5F'
