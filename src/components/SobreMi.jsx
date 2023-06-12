@@ -23,7 +23,7 @@ const SobreMi = () => {
                         <p>
                             You can get more information about me by <span>downloading my C.V.</span>
                         </p>
-                        <a href="https://drive.google.com/file/d/1uLg4_Xs5Cxh-TsU6Vv6lJ_mUK8i1m9ae/view?usp=sharing" target="_blank">
+                        <a href="https://drive.google.com/file/d/187egOMBAY3RcVJIwXRSDoki59uCBeA0E/view" target="_blank">
                             Dowload C.V <img src={imgDowload} alt='icono-dowload'/>
                         </a>
                     </AboutMeText>
