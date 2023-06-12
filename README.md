@@ -1,4 +1,4 @@
-# Portfalio
+# Jeins Portafolio
 ![imagen-demo](./src/assets/img/Caratula-portafolio.png)
 
 # Demo

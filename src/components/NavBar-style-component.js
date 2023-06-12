@@ -12,11 +12,12 @@ export const Navbar = styled.nav`
     background-color: ${({scrolled, activeScroll, theme}) => !scrolled || activeScroll ? '' : theme.contenidoNav};
 `
 export const DivContainer = styled.div`
-    padding: 20px 25px 20px 40px;
+    padding: 20px 0 20px 0;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
     z-index: 2;
     position: relative;
     border-bottom: ${({scrolled, activeScroll, theme}) => !scrolled || activeScroll ? '' : theme.fondo === fondoOscuro ? '' : '1px solid rgba(0, 0, 0, 0.3)'};

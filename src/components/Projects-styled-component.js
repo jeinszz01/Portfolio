@@ -55,6 +55,9 @@ export const DivProjectTextLinks = styled.div`
         display: flex;
         align-items: center;
         gap: .5rem;
+        &:hover {
+            color: #f1f1f1;
+        }
         img {
             width: 25px;
             height: 25px;

@@ -4,10 +4,10 @@ import cotizador from '../assets/img/criptomonedas.webp'
 import clima from '../assets/img/clima.webp'
 import bebidas from '../assets/img/bebidas.webp'
 import veterinaria from '../assets/img/veterinaria_pacientes.webp'
-import encriptador from '../assets/img/encriptador.webp'
 import ecommerce from '../assets/img/demo1.webp'
+import theTrailers from '../assets/img/the-trailers.webp'
 import github from '../assets/img/github.svg'
-import goProject from '../assets/img/go-project.svg'
+import goProject from '../assets/img/deploy.svg'
 import { SectionProjects, DivProjectMenu, DivProjectContent, DivProjectCards, DivProjectText, DivProjectTextLinks } from './Projects-styled-component'
 
 
@@ -87,17 +87,6 @@ const Projects = () => {
                         </DivProjectText>
                     </DivProjectCards>
                     <DivProjectCards>
-                        <img src={encriptador} alt='img2' />
-                        <DivProjectText>
-                            <h3>Encriptador de Texto</h3>
-                            <p>Proyecto encriptador de Texto hecho con Html, Css y Js. | #challengeonecodificador4</p>
-                            <DivProjectTextLinks>
-                                <a href='https://jeinszz01.github.io/Encriptador-de-texto---Html-Css-and-Js/' target="_blank"><img src={goProject} alt='go-projects' />Visit Wesite</a>
-                                <a href='https://github.com/jeinszz01/Encriptador-de-texto---Html-Css-and-Js' target="_blank"><img src={github} alt='github' />Repository</a> 
-                            </DivProjectTextLinks>
-                        </DivProjectText>
-                    </DivProjectCards>
-                    <DivProjectCards>
                         <img src={ecommerce} alt='img-ecommerce' />
                         <DivProjectText>
                             <h3>Ecommerce Games</h3>
@@ -105,6 +94,17 @@ const Projects = () => {
                             <DivProjectTextLinks>
                                 <a href='https://taupe-dodol-54fe4c.netlify.app' target="_blank"><img src={goProject} alt='go-projects' />Visit Wesite</a>
                                 <a href='https://github.com/jeinszz01/e-commerce-games' target="_blank"><img src={github} alt='github' />Repository</a> 
+                            </DivProjectTextLinks>
+                        </DivProjectText>
+                    </DivProjectCards>
+                    <DivProjectCards>
+                        <img src={theTrailers} alt='img-the-trailers' />
+                        <DivProjectText>
+                            <h3>the Trailers</h3>
+                            <p>App para ver trailers de películas y series almacenadas y consumidas en un Api JSON. | #challengeonealuraflixlatam4</p>
+                            <DivProjectTextLinks>
+                                <a href='https://the-trailers-movies.netlify.app' target="_blank"><img src={goProject} alt='go-projects' />Visit Wesite</a>
+                                <a href='https://github.com/jeinszz01/the-trailers' target="_blank"><img src={github} alt='github' />Repository</a> 
                             </DivProjectTextLinks>
                         </DivProjectText>
                     </DivProjectCards>
