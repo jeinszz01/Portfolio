@@ -65,9 +65,9 @@ const Contact = () => {
                     <form onSubmit={sendEmail}>
                         <DivFormContent>
                             <input type="text" name='user_name' required  placeholder="First Name" value={formDetails.firstName} onChange={(e) => onFormUpdate('firstName', e.target.value)}/>
-                            <input type="text" name='user_lastname'  placeholder="Last Name" value={formDetails.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                            <input type="text" name='user_lastname'  placeholder="Last Name. (*optional)" value={formDetails.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />
                             <input type="email" name='user_email' required  placeholder="Email Address" value={formDetails.email} onChange={(e) => onFormUpdate('email', e.target.value)} />
-                            <input type="tel" name='user_phone'  placeholder="Phone No." value={formDetails.phone} onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                            <input type="tel" name='user_phone'  placeholder="Phone No. (*optional)" value={formDetails.phone} onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                             <DivTextarea>
                                 <textarea name='user_message' rows="6" required  placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                                 <span>* Some fields are required.</span>

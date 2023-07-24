@@ -8,6 +8,8 @@ import visualSLogo from '../assets/img/Visual_Studio_Code.png'
 import restApiLogo from '../assets/img/rest-api.png'
 import gitLogo from '../assets/img/Git.png'
 import gitHubLogo from '../assets/img/GitHub-Mark.png'
+import nodelogo from '../assets/img/nodelogo.webp'
+import styledcomp from '../assets/img/styledcomponents.webp'
 import { SectionSkillsContainer, SkillBox, CarouselCss, ImgSkills } from './Skills-styled-component'
 import 'react-multi-carousel/lib/styles.css'
 
@@ -41,8 +43,16 @@ const Skills = () => {
                         <h3>React</h3>
                     </div>
                     <div>
+                        <ImgSkills src={nodelogo} alt="Imagen-node" />
+                        <h3>Node.js</h3>
+                    </div>
+                    <div>
                         <ImgSkills src={responsiveLogo} alt="Imagen-item5" />
                         <h3>Responsive Websites</h3>
+                    </div>
+                    <div>
+                        <ImgSkills src={styledcomp} alt="imagen-sc" />
+                        <h3>Styled Components</h3>
                     </div>
                     <div>
                         <ImgSkills src={sassLogo} alt="Imagen-item6" />
