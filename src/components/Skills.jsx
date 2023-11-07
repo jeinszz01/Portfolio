@@ -9,6 +9,7 @@ import restApiLogo from '../assets/img/rest-api.png'
 import gitLogo from '../assets/img/Git.png'
 import gitHubLogo from '../assets/img/GitHub-Mark.png'
 import nodelogo from '../assets/img/nodelogo.webp'
+import mysql from '../assets/img/mysql-icon.jpg'
 import styledcomp from '../assets/img/styledcomponents.webp'
 import { SectionSkillsContainer, SkillBox, CarouselCss, ImgSkills } from './Skills-styled-component'
 import 'react-multi-carousel/lib/styles.css'
@@ -45,6 +46,10 @@ const Skills = () => {
                     <div>
                         <ImgSkills src={nodelogo} alt="Imagen-node" />
                         <h3>Node.js</h3>
+                    </div>
+                    <div>
+                        <ImgSkills src={mysql} alt="Imagen-mySql" />
+                        <h3>MySql</h3>
                     </div>
                     <div>
                         <ImgSkills src={responsiveLogo} alt="Imagen-item5" />
